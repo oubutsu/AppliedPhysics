@@ -9,7 +9,19 @@ class EventsController < ApplicationController
 
   # GET /events/1
   # GET /events/1.json
+  # showでmicropostのnewも行っている
   def show
+    @micropost = @event.microposts.create!
+    # @micropost = @event.microposts.build!
+  end
+
+  def postcreate
+    @micropost = Micropost.new(post_params)
+    if @micropost.save
+      redirect_to events_path
+    else
+      redirect_to root_path
+    end
   end
 
   # GET /events/new
@@ -70,5 +82,11 @@ class EventsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
       params.require(:event).permit(:name, :deadline, :place, :comment, :info)
+    end
+    def post_params
+      params.require(:micropost).permit(:content, :event_id, :created_at)
+    end
+    def post_params
+      params.require(:micropost).permit(:content, :event_id, :created_at)
     end
 end
