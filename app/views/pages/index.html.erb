@@ -10,8 +10,8 @@
     <div class="header-left">AppliedPhysics</div>
     <div class="header-right">
       <ul>
-        <li class="selected">会社概要</li>
-        <li>採用</li>
+        <li class="selected"></li>
+        <li></li>
         <li>お問い合わせ</li>
       </ul>
     </div>
@@ -33,19 +33,27 @@
         <h1>応用物理学科</h1>
         <div class="contents-top-item">
           <h2>今週の小テスト</h2>
-          <p></p>
+          <% @tests.each do |test| %>
+          <%= test.name %>
+          <%= test.deadline %>
+          <% end %>
         </div>
         <div class="contents-top-item">
           <h2>今週のレポート</h2>
-          <p>パソコン１台で世界は変えられる。私達はそう信じています。誰もがそのチャンスを持っています。そのことを一人でも多くの人に知ってもらうために私達は存在します。</p>
+          <% @reports.each do |report| %>
+          <%=  report.name %>
+          <%= report.deadline %>
+          <% end %>
+
+          
         </div>
         <div class="contents-top-item">
           <h2>今週のさまし</h2>
-          <p>私達が突き詰めるものは３つ。楽しさ、シンプルさ、そして奥深さです。ユーザーが楽しく、簡単に扱え、本質的に理解をできるサービスを追求しています。</p>
+          <p><%= @samashi %></p>
         </div>
       </div>
       
-      <div class="contents-bottom">
+      <!-- <div class="contents-bottom">
         <h1>どんな言語が学べるの？</h1>
         <table>
           <tr>
@@ -65,7 +73,7 @@
             <td>PHPはHTMLにプログラムを埋め込む言語です。</td>
           </tr>
         </table>
-      </div>
+      </div> -->
     </div>
   </div>
   <div class="footer">
