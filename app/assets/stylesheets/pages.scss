@@ -1,0 +1,141 @@
+li {
+  list-style: none;
+}
+
+.header {
+  height: 65px;
+  border-bottom: 1px solid #dddddd;
+}
+
+.header-left {
+  float: left;
+  padding: 10px 60px;
+  color: #ED7000;
+  font-size: 30px;
+}
+
+.header-right {
+  float: right;
+  color: #808080;
+}
+
+.header-right li {
+  float: left;
+  padding: 20px 30px;
+  border-left: 1px solid #dddddd;
+}
+
+.selected {
+  color: #ED7000;
+}
+
+.main {
+  width: 1300px;
+}
+
+.footer {
+  height: 200px;
+  clear: left;
+  border-top: 1px solid #dddddd;
+}
+
+.footer-left {
+  float: left;
+  width: 200px;
+  padding: 30px 100px; 
+}
+
+.footer-left li {
+  margin-bottom: 5px;
+  /*文字の色を#808080にしてください*/
+  color:#808080;
+  /*太さ1px 種類dotted 色#808080 のborder-bottomをつけてください*/
+  border-bottom:1px dotted #808080;
+}
+
+.like-box {
+  float: left;
+  padding: 30px;
+}
+
+.sidebar {
+  height: 600px;
+  width: 200px;
+  float: left;
+  padding: 30px;
+}
+
+.sidebar li {
+  color: white;
+  background-color: #40bfb0;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+.contents {
+  height: 600px;
+  width: 900px;
+  float: left;
+  padding: 30px;
+}
+
+.contents h1 {
+  color: #40BFB0;
+}
+
+.contents-top {
+  height: 300px;
+  color: #808080;
+}
+
+.contents-top h1 {
+  margin-bottom: 30px;
+}
+
+.contents-top-item {
+  width: 270px;
+  float: left;
+  padding-right: 30px;
+}
+
+.contents-top-item h2 {
+  margin-bottom: 10px;
+}
+
+.what-highlight {
+  color: #e6855e;
+}
+
+.why-highlight {
+  color: #40bfb0;
+}
+
+.how-highlight {
+  color: #f9db57;
+}
+
+.contents-bottom h1 {
+  margin-bottom: 30px;
+}
+
+th,
+td {
+  padding: 10px 60px;
+  border: 1px solid #808080;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.html-title {
+  color: #E6855E;
+}
+
+.css-title {
+  color: #40BFB0;
+}
+
+.php-title {
+  color: #F9DB57;
+}
