@@ -32,23 +32,25 @@
       <div class="contents-top">
         <h1>応用物理学科</h1>
         <div class="contents-top-item">
-          <h2>今週の小テスト</h2>
+          <h2><%= link_to '今週の小テスト', events_path %></h2>
           <% @tests.each do |test| %>
-          <%= test.name %>
-          <%= test.deadline %>
+          <ul>
+            <li><%= test.name %>:
+          <%= test.deadline %></li>
+        </ul>
           <% end %>
         </div>
         <div class="contents-top-item">
-          <h2>今週のレポート</h2>
+          <h2><%= link_to '今週のレポート', events_path %></h2>
           <% @reports.each do |report| %>
-          <%=  report.name %>
-          <%= report.deadline %>
+          <ul><li><%=  report.name %>:
+          <%= report.deadline %></li></ul>
           <% end %>
 
           
         </div>
         <div class="contents-top-item">
-          <h2>今週のさまし</h2>
+          <h2><%= link_to '今週のさまし', events_path %></h2>
           <p><%= @samashi %></p>
         </div>
       </div>
