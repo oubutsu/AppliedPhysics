@@ -22,14 +22,4 @@ ActiveRecord::Schema.define(version: 20160421071507) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "microposts", force: :cascade do |t|
-    t.text     "content"
-    t.integer  "event_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "microposts", ["event_id", "created_at"], name: "index_microposts_on_event_id_and_created_at"
-  add_index "microposts", ["event_id"], name: "index_microposts_on_event_id"
-
 end
