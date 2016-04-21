@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
 
   root 'pages#index'
-  patch 'micropost/:id' => 'events#postcreate' , as: 'micropost'
+  post 'micropost/:id' => 'events#postcreate' , as: 'microposts'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

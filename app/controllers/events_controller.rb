@@ -11,7 +11,7 @@ class EventsController < ApplicationController
   # GET /events/1.json
   # showでmicropostのnewも行っている
   def show
-    @micropost = @event.microposts.create!
+    @micropost = @event.microposts.build
     # @micropost = @event.microposts.build!
   end
 
