@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :events
 
 
-
+  root 'pages#index'
   patch 'micropost/:id' => 'events#postcreate' , as: 'micropost'
 
   # The priority is based upon order of creation: first created -> highest priority.
