@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  before_action :set_event, only: [:show, :edit, :update, :destroy]
+  before_action :set_event, only: [:show, :edit, :update, :destroy, :postcreate]
 
   # GET /events
   # GET /events.json
@@ -12,15 +12,20 @@ class EventsController < ApplicationController
   # showでmicropostのnewも行っている
   def show
     @micropost = @event.microposts.build
-    # @micropost = @event.microposts.build!
+
+    @microposts = @event.microposts
+    #   redirect_to @event
+    # else
+    #   redirect_to @event
+    # end
   end
 
   def postcreate
-    @micropost = Micropost.new(post_params)
+    @micropost = @event.microposts.build(post_params)
     if @micropost.save
-      redirect_to events_path
+      redirect_to @event
     else
-      redirect_to root_path
+      redirect_to @event
     end
   end
 

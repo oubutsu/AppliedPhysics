@@ -20,6 +20,16 @@
   <%= @event.comment %>
 </p>
 
+
+
+<div class="container">
+	<strong>Content:</strong>
+	<% @microposts.each do |micropost| %>
+	<p><%= micropost.content %></p>
+	<% end %>
+</div>
+
+
 <%= form_for(@micropost) do |f| %>
  <!--  <% if @micropost.errors.any? %>
     <div id="error_explanation">
