@@ -1,92 +1,56 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>Progate</title>
-  <link rel="stylesheet" href="stylesheet.css">
-</head>
-<body>
+<div class = "wrapper_bg wrapper">
   <div class="header">
     <div class="header-left">AppliedPhysics</div>
     <div class="header-right">
       <ul>
-        <li class="selected"></li>
-        <li></li>
+        <li class="selected"><%= link_to '新規投稿', new_event_path %></li>
+        <li><%= link_to '情報一覧',events_path %></li>
         <li>お問い合わせ</li>
       </ul>
-    </div>
+    </div>  
   </div>
 
   <div class="main">
+
     <div class="sidebar">
       <ul>
         <li>応用物理学科</li>
-        <li>小テスト</li>
-        <li>レポート</li>
-        <li>さまし</li>
+        <li><%= link_to '小テスト', events_path %></li>
+        <li><%= link_to 'レポート', events_path %></li>
+        <li><%= link_to 'さまし', events_path %></li>
       </ul>
-      <img src="https://prog-8.com/images/sample.jpg">
     </div>
     
     <div class="contents">
       <div class="contents-top">
         <h1>応用物理学科</h1>
-        <div class="contents-top-item">
-          <h2>今週の小テスト</h2>
-          <% @tests.each do |test| %>
-          <%= test.name %>
-          <%= test.deadline %>
-          <% end %>
-        </div>
-        <div class="contents-top-item">
-          <h2>今週のレポート</h2>
-          <% @reports.each do |report| %>
-          <%=  report.name %>
-          <%= report.deadline %>
-          <% end %>
 
-          
-        </div>
         <div class="contents-top-item">
-          <h2>今週のさまし</h2>
+          <h2><%= link_to '今週の小テスト', events_path %></h2>
+          <% @tests.each do |test| %>
+          <ul>
+            <li><%= test.name %>:
+          <%= test.deadline %></li>
+        </ul>
+          <% end %>
+        </div>
+
+        <div class="contents-top-item">
+          <h2><%= link_to '今週のレポート', events_path %></h2>
+          <% @reports.each do |report| %>
+          <ul><li><%=  report.name %>:
+          <%= report.deadline %></li></ul>
+          <% end %>
+        </div>
+
+        <div class="contents-top-item">
+          <h2><%= link_to '今週のさまし', events_path %></h2>
           <p><%= @samashi %></p>
         </div>
+
       </div>
-      
-      <!-- <div class="contents-bottom">
-        <h1>どんな言語が学べるの？</h1>
-        <table>
-          <tr>
-            <th>言語名</th>
-            <th>特徴</th>
-          </tr>
-          <tr>
-            <td class="html-title">HTML</td>
-            <td>ウェブページの作成に使用される言語です。</td>
-          </tr>
-          <tr>
-            <td class="css-title">CSS</td>
-            <td>CSSは、HTMLと組み合わせて使用され、それを装飾する言語です。</td>
-          </tr>
-          <tr>
-            <td class="php-title">PHP</td>
-            <td>PHPはHTMLにプログラムを埋め込む言語です。</td>
-          </tr>
-        </table>
-      </div> -->
     </div>
+
+
   </div>
-  <div class="footer">
-    <div class="footer-left">
-      <ul>
-        <li>会社概要</li>
-        <li>採用</li>
-        <li>お問い合わせ</li>
-      </ul>
-    </div>
-    <div class="like-box">
-      <iframe src="https://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FProgate%2F742679992421539&amp;show_faces=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:300px;" allowTransparency="true"></iframe>
-    </div>
-  </div>
-</body>
-</html>
+</div>

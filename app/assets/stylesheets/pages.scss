@@ -1,3 +1,21 @@
+html, body{
+	width:  100%;
+	height: 100%;
+background-size:100% auto;
+		background-image: url("../assets/space.jpg");
+}
+
+.wrapper{
+	width: 100%;
+	height: 100%;
+
+	background-color: #eee;
+}
+
+.wrapper_bg {
+	background-image: url("../assets/space.jpg");
+}
+
 li {
   list-style: none;
 }
@@ -33,42 +51,22 @@ li {
   width: 1300px;
 }
 
-.footer {
-  height: 200px;
-  clear: left;
-  border-top: 1px solid #dddddd;
-}
-
-.footer-left {
-  float: left;
-  width: 200px;
-  padding: 30px 100px; 
-}
-
-.footer-left li {
-  margin-bottom: 5px;
-  /*文字の色を#808080にしてください*/
-  color:#808080;
-  /*太さ1px 種類dotted 色#808080 のborder-bottomをつけてください*/
-  border-bottom:1px dotted #808080;
-}
-
-.like-box {
-  float: left;
-  padding: 30px;
-}
-
 .sidebar {
   height: 600px;
   width: 200px;
   float: left;
-  padding: 30px;
+  padding: 50px 30px;
 }
 
 .sidebar li {
   color: white;
   background-color: #40bfb0;
   padding: 15px;
+  margin-bottom: 30px;
+}
+.sidebar li  a{
+  color: white;
+  background-color: #40bfb0;
   margin-bottom: 10px;
 }
 
