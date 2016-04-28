@@ -43,9 +43,6 @@ class EventsController < ApplicationController
     @event = Event.new(event_params)
     @event.save!
     redirect_to @event
-    rescue
-      flash[:danger] = '必須な項目が入力されていません'
-      render 'new'
   end
 
   # PATCH/PUT /events/1
@@ -80,7 +77,7 @@ class EventsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
-      params.require(:event).permit(:name, :deadline, :place, :comment, :info)
+      params.require(:event).permit(:name, :deadline, :place, :comment, :info, :event_type)
     end
     def post_params
       params.require(:micropost).permit(:content, :event_id, :created_at)
