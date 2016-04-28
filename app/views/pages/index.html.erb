@@ -2,14 +2,14 @@
   
   <div class="main">
 
-    <div class="sidebar">
+    <!-- <div class="sidebar">
       <ul>
         <li>応用物理学科</li>
         <li><%= link_to '小テスト', events_path %></li>
         <li><%= link_to 'レポート', events_path %></li>
         <li><%= link_to 'さまし', events_path %></li>
       </ul>
-    </div>
+    </div> -->
     
     <div class="contents">
       <div class="contents-top">
@@ -19,6 +19,7 @@
           <h2><%= link_to '今週の小テスト', events_path %></h2>
           <% @tests.each do |test| %>
           <ul>
+            <li>  内容  :  提出期限　</li>
             <li><%= test.name %>:
           <%= test.deadline %></li>
         </ul>
