@@ -1,18 +1,6 @@
 <div>
   <div class="form-horizontal" role="form">
     <%= form_for(@event) do |f| %>
-      <% if @event.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved:</h2>
-
-          <ul>
-          <% @event.errors.full_messages.each do |message| %>
-            <li><%= message %></li>
-          <% end %>
-          </ul>
-        </div>
-      <% end %>
-
       <div class="field form-group">
         <%= f.label :name,:class => "col-sm-3 control-label" %><br>
         <div class="col-sm-7">
@@ -23,6 +11,12 @@
         <%= f.label :deadline,:class => "col-sm-3 control-label" %><br>
         <div class="col-sm-7">
          <%= f.date_field :deadline, :class => "form-control" %>
+        </div>
+      </div>
+      <div class="field form-group">
+        <%= f.label :event_type,:class => "col-sm-3 control-label" %><br>
+        <div class="col-sm-7">
+          <%= f.select :event_type, ['レポート','小テスト','テスト','その他'], { include_blank: '選択してください' }, class: "form-control" %>
         </div>
       </div>
       <div class="field form-group">
