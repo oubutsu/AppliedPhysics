@@ -1,4 +1,7 @@
-<div class = "index"><p id="notice"><%= notice %></p>
+
+<div class = 'index'>
+  <p id="notice"><%= notice %></p>
+
 
 
 <!-- HTML -->
@@ -29,11 +32,13 @@
 </html>
 <!-- <h1>Listing Events</h1>
 
+<div class = 'table'>
 <table>
   <thead class ='container'>
     <tr>
       <th>Name</th>
       <th>Deadline</th>
+      <th>Type</th>
       <th>Place</th>
       <th>Comment</th>
       <th colspan="3"></th>
@@ -45,6 +50,7 @@
       <tr>
         <td><%= link_to event.name, event %></td>
         <td><%= event.deadline %></td>
+        <td><%= event.event_type %></td>
         <td><%= event.place %></td>
         <td><%= event.comment %></td>
         <td><%= link_to 'Show', event %></td>
@@ -54,10 +60,11 @@
     <% end %>
   </tbody>
 </table>
-
+</div>
 <br>
  -->
 <%= link_to 'New Event', new_event_path %>
+
 
 </div>
 
@@ -78,3 +85,4 @@ $(function () {
   });
 });
 </script>
+

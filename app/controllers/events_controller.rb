@@ -43,6 +43,9 @@ class EventsController < ApplicationController
     @event = Event.new(event_params)
     @event.save!
     redirect_to @event
+    rescue
+      flash.now[:danger] = '必須な項目が入力されていません'
+      render 'new'
   end
 
   # PATCH/PUT /events/1

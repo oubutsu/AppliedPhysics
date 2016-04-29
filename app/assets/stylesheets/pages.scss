@@ -26,6 +26,11 @@ li {
   list-style: none;
 }
 
+a:hover {
+text-decoration:none;
+border-style:none; 
+background-color:transparent;
+}
 .header {
   height: 65px;
   border-bottom: 1px solid #dddddd;
@@ -57,7 +62,7 @@ li {
   width: 1300px;
 }
 
-.sidebar {
+/*.sidebar {
   height: 600px;
   width: 200px;
   float: left;
@@ -74,7 +79,7 @@ li {
   color: white;
   background-color: #40bfb0;
   margin-bottom: 10px;
-}
+}*/
 
 .contents {
   height: 600px;
