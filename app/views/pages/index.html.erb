@@ -17,20 +17,32 @@
 
         <div class="contents-top-item">
           <h2><%= link_to '今週の小テスト', events_path %></h2>
-          <% @tests.each do |test| %>
+          
           <ul>
-            <li>  内容  :  提出期限　</li>
-            <li><%= test.name %>:
-          <%= test.deadline %></li>
+            
+            <% @tests.each do |test| %>
+            <li>
+              <% if test.event_type == '小テスト'  %>
+              <%= test.name %>:
+              <%= test.deadline %>まで
+              <% end %>
+            </li>
         </ul>
           <% end %>
         </div>
 
         <div class="contents-top-item">
           <h2><%= link_to '今週のレポート', events_path %></h2>
-          <% @reports.each do |report| %>
-          <ul><li><%=  report.name %>:
-          <%= report.deadline %></li></ul>
+          
+          <ul>
+            
+            <% @reports.each do |report| %>
+            <li>
+              <% if report.event_type == 'レポート'  %>
+              <%= report.name %>:
+              <%= report.deadline %>まで
+              <% end %>
+            </li></ul>
           <% end %>
         </div>
 
