@@ -13,5 +13,5 @@ json.array!(@events) do |event|
   else
   	json.color '#B6B6B4'
   end
-  json.url event_url(event, format: :json)
+  json.url event_url(event)
 end
