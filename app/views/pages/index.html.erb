@@ -47,8 +47,17 @@
         </div>
 
         <div class="contents-top-item">
-          <h2 data-no-turbolink><%= link_to '今週のさまし', events_path %></h2>
-          <p><%= @samashi %></p>
+          <h2 data-no-turbolink><%= link_to 'その他', events_path %></h2>
+          
+        <ul>
+          <% @reports.each do |report| %>
+            <li>
+              <% if report.event_type == 'テスト'or report.event_type == 'その他'  %>
+              <%= report.name %>:
+              <%= report.deadline %>まで
+              <% end %>
+            </li></ul>
+          <% end %>
         </div>
 
       </div>
