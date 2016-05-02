@@ -51,5 +51,5 @@
   </div>
 <% end %>
 
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+<%= link_to 'Edit', edit_event_path(@event), 'data-no-turbolink' => true%> |
+<%= link_to 'Back', events_path, 'data-no-turbolink' => true %>
