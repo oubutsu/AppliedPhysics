@@ -18,6 +18,7 @@
 //= require moment
 //= require fullcalendar
 //= require moment
+//= require bootstrap.min
 
 $(document).ready(function() {
     $('#calendar').fullCalendar({
