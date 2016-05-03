@@ -46,6 +46,12 @@ gem 'bootstrap-sass', '3.2.0.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+#デバッグ用のgem
+gem 'pry-rails', '0.3.2'
+gem 'pry-doc', '0.6.0'
+gem 'pry-stack_explorer', '0.4.9.1'
+gem 'pry-byebug'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
