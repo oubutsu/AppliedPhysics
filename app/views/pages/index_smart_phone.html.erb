@@ -3,11 +3,39 @@
 	<div class="report contents">
 		<h2>今週のレポート</h2>
 		<div class="content">
+		  <% if @reports.present? %>
+			<ul>
+	          <% @reports.each do |report| %>
+	            <li>
+	              <% if report.event_type == 'レポート'  %>
+		              <%= report.name %>:
+		              <%= report.deadline %>まで
+	              <% end %>
+	            </li>
+	          <% end %>
+	        </ul>
+	      <% else %>
+	      	<p>レポートはありません</p>
+	      <% end %>
 		</div>
 	</div>
 	<div class="small_test contents">
 		<h2>今週の小テスト</h2>
 		<div class="content">
+		  <% if @tests.present? %>
+			<ul>
+	          <% @tests.each do |test| %>
+	            <li>
+	              <% if test.event_type == '小テスト'  %>
+		              <%= test.name %>:
+		              <%= test.deadline %>まで
+	              <% end %>
+	            </li>
+	          <% end %>
+	        </ul>
+	      <% else %>
+	      	<p>小テストはありません</p>
+	      <% end %>
 		</div>
 	</div>
 	<div class="others contents">
