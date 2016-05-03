@@ -1,0 +1,38 @@
+<div>
+  <div rsole="form">
+    <%= form_for(@event) do |f| %>
+        <%= f.label :name,:class => "control-label"%>
+        <div class="form-field">
+        <%= f.text_field :name, :class => "form-control" %>
+        </div>
+      </div>
+      <div class="field form-group">
+        <%= f.label :deadline,:class => "control-label" %>
+        <div class="form-field">
+         <%= f.date_field :deadline, :class => "form-control" %>
+        </div>
+      </div>
+      <div class="field form-group">
+        <%= f.label :event_type,:class => "control-label" %>
+        <div class="form-field">
+          <%= f.select :event_type, ['レポート','小テスト','テスト','その他'], { include_blank: '選択してください' }, class: "form-control" %>
+        </div>
+      </div>
+      <div class="field form-group">
+        <%= f.label :place,:class => "control-label" %>
+        <div class="form-field">
+          <%= f.text_field :place, :class => "form-control" %>
+        </div>
+      </div>
+      <div class="field form-group">
+        <%= f.label :comment,:class => "control-label" %>
+        <div class="form-field">
+          <%= f.text_area :comment, :class => "form-control" %>
+        </div>
+      </div>
+      <div class="align-center">
+          <%= f.submit "送信", :class => "button"%>
+      </div>
+    <% end %>
+  </div>
+</div>

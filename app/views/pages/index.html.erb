@@ -1,9 +1,8 @@
 <div class = "wrapper_bg wrapper">
-  
+
   <div class="main">
 
 
-    
     <div class="contents">
       <div class="contents-top">
         <div class="title1">
@@ -12,9 +11,7 @@
 
         <div class="contents-top-item">
           <h2 data-no-turbolink><%= link_to '今週の小テスト', events_path %></h2>
-          
           <ul>
-            
             <% @tests.each do |test| %>
             <li>
               <% if test.event_type == '小テスト'  %>
@@ -28,9 +25,7 @@
 
         <div class="contents-top-item">
           <h2 data-no-turbolink><%= link_to '今週のレポート', events_path %></h2>
-          
           <ul>
-            
             <% @reports.each do |report| %>
             <li>
               <% if report.event_type == 'レポート'  %>
@@ -40,7 +35,6 @@
             </li></ul>
           <% end %>
         </div>
-
         <div class="contents-top-item">
           <h2 data-no-turbolink><%= link_to 'その他', events_path %></h2>
           
