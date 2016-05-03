@@ -27,7 +27,8 @@
 }
 
 .dropmenu{
-	margin: 0 10px 0 auto;
+	margin-right: 0;
+    margin-left: auto;
 }
 .dropdown{
 	border: 2px solid #000080;
@@ -40,7 +41,6 @@
 	font-size: 18px;
 	display: absolute;
 	top: 15px;
-
 }
 
 .dropdown-toggle{
@@ -64,3 +64,5 @@
 	}
 	display: flex;
 }
+
+
