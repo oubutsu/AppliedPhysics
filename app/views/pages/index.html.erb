@@ -10,7 +10,12 @@
         </div>
 
         <div class="contents-top-item">
-          <h2 data-no-turbolink><%= link_to '今週の小テスト', events_path %></h2>
+          <h2 data-no-turbolink>
+            <%= link_to (events_path) do %>
+            今週の<span class = "test">小テスト</span>
+            <%end%>
+          </h2>
+          <div class="block1">
           <ul>
             <% @tests.each do |test| %>
             <li>
@@ -18,26 +23,46 @@
               <%= test.name %>:
               <%= test.deadline %>まで
               <% end %>
+              <% end %>
             </li>
         </ul>
-          <% end %>
+          
+        </div>
         </div>
 
         <div class="contents-top-item">
-          <h2 data-no-turbolink><%= link_to '今週のレポート', events_path %></h2>
-          <ul>
-            <% @reports.each do |report| %>
-            <li>
-              <% if report.event_type == 'レポート'  %>
-              <%= report.name %>:
-              <%= report.deadline %>まで
-              <% end %>
-            </li></ul>
-          <% end %>
+          <h2 data-no-turbolink>
+            <%= link_to (events_path) do %>
+              今週の<span class = "report">レポート</span>
+            <% end %> 
+          </h2>
+          <div class="block1">
+            <% if @reports == nil %>
+              <ul>
+                <li>今週提出期限のレポートはありません</li>
+              </ul>
+            <% else %>
+              <ul>
+                <% @reports.each do |report| %>
+                  <li>
+                    <% if report.event_type == 'レポート'  %>
+                    <%= report.name %>:
+                    <%= report.deadline %>まで
+                    <% end %>              
+                  </li>
+                <% end %>
+              </ul>
+            <% end %>
+            
         </div>
+      </div>
         <div class="contents-top-item">
-          <h2 data-no-turbolink><%= link_to 'その他', events_path %></h2>
-          
+          <h2 data-no-turbolink>
+            <%= link_to (events_path) do %>
+            <span class="others">その他</span>
+            <% end %>
+          </h2>
+        <div class="block1">
         <ul>
           <% @reports.each do |report| %>
             <li>
@@ -45,8 +70,9 @@
               <%= report.name %>:
               <%= report.deadline %>まで
               <% end %>
+              <% end %>
             </li></ul>
-          <% end %>
+        </div>
         </div>
 
       </div>
