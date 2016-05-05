@@ -1,83 +1,84 @@
-<div class = "wrapper_bg wrapper">
+<div class="title1">
+  <p class="headline_sentence">
+    次世代技術の芽と新しい物理をつくる
+  </p>
+  <h1 class="headline_title">
+    応用物理学科
+  </h1>
+</div>
 
-  <div class="main">
 
-
-    <div class="contents">
-      <div class="contents-top">
-        <div class="title1">
-          <h1>応用物理学科</h1>
-        </div>
-
-        <div class="contents-top-item">
-          <h2 data-no-turbolink>
-            <%= link_to (events_path) do %>
-            今週の<span class = "test">小テスト</span>
-            <%end%>
-          </h2>
-          <div class="block1">
-          <ul>
-            <% @tests.each do |test| %>
-            <li>
-              <% if test.event_type == '小テスト'  %>
-              <%= test.name %>:
-              <%= test.deadline %>まで
-              <% end %>
-              <% end %>
-            </li>
-        </ul>
-          
-        </div>
-        </div>
-
-        <div class="contents-top-item">
-          <h2 data-no-turbolink>
-            <%= link_to (events_path) do %>
-              今週の<span class = "report">レポート</span>
-            <% end %> 
-          </h2>
-          <div class="block1">
-            <% if @reports == nil %>
-              <ul>
-                <li>今週提出期限のレポートはありません</li>
-              </ul>
-            <% else %>
-              <ul>
-                <% @reports.each do |report| %>
-                  <li>
-                    <% if report.event_type == 'レポート'  %>
-                    <%= report.name %>:
-                    <%= report.deadline %>まで
-                    <% end %>              
-                  </li>
-                <% end %>
-              </ul>
-            <% end %>
-            
-        </div>
-      </div>
-        <div class="contents-top-item">
-          <h2 data-no-turbolink>
-            <%= link_to (events_path) do %>
-            <span class="others">その他</span>
-            <% end %>
-          </h2>
-        <div class="block1">
-        <ul>
-          <% @reports.each do |report| %>
-            <li>
-              <% if report.event_type == 'テスト'or report.event_type == 'その他'  %>
-              <%= report.name %>:
-              <%= report.deadline %>まで
-              <% end %>
-              <% end %>
-            </li></ul>
-        </div>
-        </div>
-
-      </div>
+<div class="top-page-lp">
+  <div class="content-report-lp contents-lp">
+    <h2>今週のレポート</h2>
+    <div class="content-lp">
+      <% if @reports.present? %>
+      <ul>
+        <% @reports.each do |report| %>
+          <li>
+            <div class="content-lp_name">
+              <%= report.name %>
+            </div>
+            <div class="content-lp_deadline">
+              <%= report.deadline.month %>月<%= report.deadline.day %>日まで
+            </div>
+            <div class="content-lp_place">
+              提出場所:<%= report.place %>
+            </div>
+          </li>
+        <% end %>
+      </ul>
+        <% else %>
+          <p>レポートはありません</p>
+        <% end %>
     </div>
-
-
+  </div>
+  <div class="content-small_test-lp contents-lp">
+    <h2>今週の小テスト</h2>
+    <div class="content-lp">
+      <% if @tests.present? %>
+      <ul>
+        <% @tests.each do |test| %>
+          <li>
+            <div class="content-lp_name">
+              <%= test.name %>
+            </div>
+            <div class="content-lp_deadline">
+              <%= test.deadline.month %>月<%= test.deadline.day %>日まで
+            </div>
+            <div class="content-lp_place">
+              提出場所:<%= test.place %>
+            </div>
+          </li>
+        <% end %>
+      </ul>
+        <% else %>
+          <p>小テストはありません</p>
+        <% end %>
+    </div>
+  </div>
+  <div class="content-others-lp contents-lp">
+    <h2>その他</h2>
+    <div class="content-lp">
+      <% if @others.present? %>
+      <ul>
+        <% @others.each do |other| %>
+          <li>
+            <div class="content-lp_name">
+              <%= other.name %>
+            </div>
+            <div class="content-lp_deadline">
+              <%= other.deadline.month %>月<%= other.deadline.day %>日まで
+            </div>
+            <div class="content-lp_place">
+              提出場所:<%= other.place %>
+            </div>
+          </li>
+        <% end %>
+      </ul>
+        <% else %>
+          <p>その他の予定はありません</p>
+        <% end %>
+    </div>
   </div>
 </div>
