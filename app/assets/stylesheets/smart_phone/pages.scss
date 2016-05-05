@@ -1,11 +1,5 @@
 .top-page{
 	height: 100%;
-  .image{
-    width: 90%;
-    height:100px;
-    margin: 0 auto;
-    text-align: center;
-  }
   h2{
   	font-family:initiail;
   	margin: 0;
@@ -32,14 +26,18 @@
       padding-bottom: -3px;
     }
     &_name{
-      width: 30%;
+      width: 50%;
       border-bottom: 1px solid #555;
-      padding-left: 30px;
+      text-align: center;
       padding-top: 1px;
       padding-bottom: 1px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -o-text-overflow: ellipsis; /* Opera9,10対応 */
     }
     &_deadline{
-      width: 60%;
+      width: 40%;
       border-bottom: 1px solid #555;
       padding-left: 30px;
     }
