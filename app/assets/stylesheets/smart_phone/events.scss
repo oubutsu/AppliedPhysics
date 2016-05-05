@@ -45,7 +45,43 @@
 }
 
 .show{
-	font-size: 1.2em;
+	.board{
+		h4{
+			font-weight: bold;
+			border-bottom: 1px solid #eee;
+			padding-bottom: 2px;
+			margin-top: 20px;
+		}
+		margin-top:10px;
+		&-item{
+			margin-top: 5px;
+		}
+		&_info{
+
+		}
+		&_content{
+			margin-left: 10px;
+		}
+	}
+	.control-label{
+		font-size: 16px;
+	}
+	.form-control{
+		margin-bottom: 10px;
+	}
+	.align-center{
+		text-align: center;
+	}
+	.button {
+	background-color: #333;
+	border: 2px solid #333;
+	color: #fff;
+	line-height: 30px;
+	width: 200px;
+	border-radius: 3px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	}
 	.event{
 		margin-left: 10px;
 		&-item{

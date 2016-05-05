@@ -12,7 +12,6 @@ class EventsController < ApplicationController
   # showでmicropostのnewも行っている
   def show
     @micropost = @event.microposts.build
-    @microposts = @event.microposts
     #   redirect_to @event
     # else
     #   redirect_to @event
@@ -21,6 +20,9 @@ class EventsController < ApplicationController
 
   def postcreate
     @micropost = @event.microposts.build(post_params)
+    if @micropost.editor.blank?
+      @micropost.editor = '名無しの権兵衛'
+    end
     if @micropost.save
       redirect_to @event
     else
@@ -83,6 +85,6 @@ class EventsController < ApplicationController
       params.require(:event).permit(:name, :deadline, :place, :comment, :info, :event_type)
     end
     def post_params
-      params.require(:micropost).permit(:content, :event_id, :created_at)
+      params.require(:micropost).permit(:content, :event_id, :created_at, :editor)
     end
 end
