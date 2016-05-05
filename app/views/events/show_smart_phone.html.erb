@@ -1,0 +1,49 @@
+<%= render 'navi'%>
+<div class="show">
+<p id="notice"><%= notice %></p>
+<div class="event">
+<div class="event-item">
+  <div class="event-item-label">Name</div>
+  <div class="event-item-content"><%= @event.name %></div>
+</div>
+
+<div class="event-item">
+  <div class="event-item-label">Deadline</div>
+  <div class="event-item-content"><%= @event.deadline %></div>
+</div>
+
+<div class="event-item">
+  <div class="event-item-label">Place</div>
+  <div class="event-item-content"><%= @event.place %></div>
+</div>
+
+<div class="event-item">
+  <div class="event-item-label">Comment</div>
+  <% if @event.comment.present? %>
+    <div class="event-item-content"><%= @event.comment %></div>
+  <% else %>
+    <div class="event-item-content">特にありません</div>
+  <% end %>
+</div>
+
+<div class="container">
+	<div>Content:</div>
+	<% @microposts.each do |micropost| %>
+	<p><%= micropost.content %></p>
+	<% end %>
+</div>
+
+
+<%= form_for(@micropost) do |f| %>
+  <div class="field">
+    <%= f.text_field :content %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<%= link_to 'Edit', edit_event_path(@event), 'data-no-turbolink' => true%> |
+<%= link_to 'Back', events_path, 'data-no-turbolink' => true %>
+</div>

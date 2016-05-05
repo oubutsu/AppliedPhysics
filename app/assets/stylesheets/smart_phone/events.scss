@@ -43,3 +43,28 @@
 	margin-left: 10px;
 	font-size: 15px;
 }
+
+.show{
+	font-size: 1.2em;
+	.event{
+		margin-left: 10px;
+		&-item{
+			display: flex;
+			margin-top: 2px;
+		    line-height: 2em;
+			&-label{
+				width: 20%;
+				text-align: center;
+				background: rgba(0,112,200,0.8);
+				color: white;
+			}
+			&-content{
+				width: 70%;
+				padding-left: 10px;
+				background: rgba(239,249,255,0.8);
+				color: rgba(0,112,200,0.8);
+
+			}
+		}
+	}
+}
