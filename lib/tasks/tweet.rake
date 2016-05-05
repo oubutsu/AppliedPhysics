@@ -20,7 +20,7 @@ namespace :twiiter do
 				templete = "#{templete}\n・" + report.name
 			end
 		else
-			templete = "#{templete}ありません"
+			templete = "#{templete}ありません\n https://appliedphysics.herokuapp.com/"
 		end
 
 		bot.client.update(templete)
