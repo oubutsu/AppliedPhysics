@@ -4,19 +4,28 @@
 }
 
 /* line 4, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/events.scss */
+.fc-content {
+  color: white !important;
+}
+/* line 5, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/events.scss */
+.fc-content span {
+  text-decoration: none !important;
+}
+
+/* line 10, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/events.scss */
 .new {
   font-family: fantasy;
   padding-top: 10px;
 }
-/* line 6, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/events.scss */
+/* line 12, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/events.scss */
 .new .control-label {
   font-size: 16px;
 }
-/* line 9, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/events.scss */
+/* line 15, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/events.scss */
 .new .form-control {
   margin-bottom: 10px;
 }
-/* line 12, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/events.scss */
+/* line 18, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/events.scss */
 .new h1 {
   font-weight: bold;
   margin-bottom: 0px;
@@ -24,7 +33,7 @@
   padding: 0;
   text-align: center;
 }
-/* line 20, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/events.scss */
+/* line 26, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/events.scss */
 .new .button {
   background-color: #333;
   border: 2px solid #333;
@@ -35,55 +44,55 @@
   margin-top: 10px;
   margin-bottom: 10px;
 }
-/* line 31, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/events.scss */
+/* line 37, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/events.scss */
 .new .align-center {
   text-align: center;
 }
 
-/* line 37, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/events.scss */
+/* line 43, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/events.scss */
 .newcontent .dropdown {
   margin-right: 10px;
   margin-left: auto;
 }
 
-/* line 42, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/events.scss */
+/* line 48, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/events.scss */
 .back {
   margin-left: 10px;
   font-size: 15px;
 }
 
-/* line 48, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/events.scss */
+/* line 54, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/events.scss */
 .show .board {
   margin-top: 10px;
 }
-/* line 49, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/events.scss */
+/* line 55, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/events.scss */
 .show .board h4 {
   font-weight: bold;
   border-bottom: 1px solid #eee;
   padding-bottom: 2px;
   margin-top: 20px;
 }
-/* line 56, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/events.scss */
+/* line 62, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/events.scss */
 .show .board-item {
   margin-top: 20px;
 }
-/* line 62, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/events.scss */
+/* line 68, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/events.scss */
 .show .board_content {
   margin-left: 14px;
 }
-/* line 66, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/events.scss */
+/* line 72, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/events.scss */
 .show .control-label {
   font-size: 16px;
 }
-/* line 69, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/events.scss */
+/* line 75, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/events.scss */
 .show .form-control {
   margin-bottom: 10px;
 }
-/* line 72, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/events.scss */
+/* line 78, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/events.scss */
 .show .align-center {
   text-align: center;
 }
-/* line 75, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/events.scss */
+/* line 81, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/events.scss */
 .show .button {
   background-color: #333;
   border: 2px solid #333;
@@ -94,24 +103,24 @@
   margin-top: 10px;
   margin-bottom: 10px;
 }
-/* line 85, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/events.scss */
+/* line 91, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/events.scss */
 .show .event {
   margin-left: 10px;
 }
-/* line 87, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/events.scss */
+/* line 93, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/events.scss */
 .show .event-item {
   display: flex;
   margin-top: 2px;
   line-height: 2em;
 }
-/* line 91, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/events.scss */
+/* line 97, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/events.scss */
 .show .event-item-label {
   width: 23%;
   text-align: center;
   background: rgba(0, 112, 200, 0.8);
   color: white;
 }
-/* line 97, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/events.scss */
+/* line 103, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/events.scss */
 .show .event-item-content {
   width: 70%;
   padding-left: 10px;
@@ -145,12 +154,16 @@
   padding: 0;
 }
 /* line 23, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/pages.scss */
+.top-page .content a {
+  text-decoration: none;
+}
+/* line 26, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/pages.scss */
 .top-page .content p {
   padding-top: 5px;
   padding-left: 20px;
   padding-bottom: -3px;
 }
-/* line 28, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/pages.scss */
+/* line 31, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/pages.scss */
 .top-page .content_name {
   width: 50%;
   border-bottom: 1px solid #555;
@@ -164,34 +177,34 @@
   -o-text-overflow: ellipsis;
   /* Opera9,10対応 */
 }
-/* line 40, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/pages.scss */
+/* line 43, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/pages.scss */
 .top-page .content_deadline {
   width: 40%;
   border-bottom: 1px solid #555;
   padding-left: 30px;
 }
-/* line 45, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/pages.scss */
+/* line 48, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/pages.scss */
 .top-page .content li {
   display: flex;
   padding: 3px;
 }
-/* line 49, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/pages.scss */
+/* line 52, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/pages.scss */
 .top-page .content li:last-child {
   border: none;
 }
-/* line 52, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/pages.scss */
+/* line 55, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/pages.scss */
 .top-page .content ul {
-  padding-left: 25px;
+  padding-left: 30px;
 }
-/* line 56, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/pages.scss */
+/* line 59, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/pages.scss */
 .top-page .content-report h2 {
   background: #5CB3FF;
 }
-/* line 61, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/pages.scss */
+/* line 64, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/pages.scss */
 .top-page .content-small_test h2 {
   background: #59E817;
 }
-/* line 66, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/pages.scss */
+/* line 69, /Users/ryota/workplace/AppliedPhysics/app/assets/stylesheets/smart_phone/pages.scss */
 .top-page .content-others h2 {
   background: #B6B6B4;
 }

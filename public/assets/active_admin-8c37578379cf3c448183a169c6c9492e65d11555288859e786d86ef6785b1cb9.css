@@ -1869,10 +1869,6 @@ table.index_grid td {
 }
 
 /* line 1, /Users/ryota/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/bundler/gems/active_admin-3b2015c8948b/app/assets/stylesheets/active_admin/components/_links.scss */
-a, a:link, a:visited {
-  color: #38678b;
-  text-decoration: underline;
-}
 
 /* line 5, /Users/ryota/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/bundler/gems/active_admin-3b2015c8948b/app/assets/stylesheets/active_admin/components/_links.scss */
 a:hover {

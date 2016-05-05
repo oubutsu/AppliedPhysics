@@ -1,6 +1,12 @@
 .alert{
 		margin-bottom: 5px;
 }
+ .fc-content{
+ 	span{
+ 	  text-decoration: none !important;
+ 	}
+      color: white !important;
+    }
 .new{
 	font-family: fantasy;
 	.control-label{
