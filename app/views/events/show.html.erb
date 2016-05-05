@@ -1,55 +1,47 @@
+<div class="show">
 <p id="notice"><%= notice %></p>
+<div class="event">
+<div class="event-item">
+  <div class="event-item-label">Name</div>
+  <div class="event-item-content"><%= @event.name %></div>
+</div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @event.name %>
-</p>
+<div class="event-item">
+  <div class="event-item-label">Deadline</div>
+  <div class="event-item-content"><%= @event.deadline %></div>
+</div>
 
-<p>
-  <strong>Deadline:</strong>
-  <%= @event.deadline %>
-</p>
+<div class="event-item">
+  <div class="event-item-label">Place</div>
+  <div class="event-item-content"><%= @event.place %></div>
+</div>
 
-<p>
-  <strong>Place:</strong>
-  <%= @event.place %>
-</p>
-
-<p>
-  <strong>Comment:</strong>
-  <%= @event.comment %>
-</p>
+<div class="event-item">
+  <div class="event-item-label">Comment</div>
+  <% if @event.comment.present? %>
+    <div class="event-item-content"><%= @event.comment %></div>
+  <% else %>
+    <div class="event-item-content">特にありません</div>
+  <% end %>
+</div>
 
 <div class="container">
-	<strong>Content:</strong>
-	<% @microposts.each do |micropost| %>
-	<p><%= micropost.content %></p>
-	<% end %>
+  <div>掲示板</div>
+  <% @microposts.each do |micropost| %>
+  <p><%= micropost.content %></p>
+  <% end %>
 </div>
 
 
 <%= form_for(@micropost) do |f| %>
- <!--  <% if @micropost.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved:</h2>
-
-      <ul>
-      <% @event.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
- -->
   <div class="field">
-    <%= f.label :content %><br>
     <%= f.text_field :content %>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "送信", :class => "button" %>
   </div>
 <% end %>
 
-<%= link_to 'Edit', edit_event_path(@event), 'data-no-turbolink' => true%> |
-<%= link_to 'Back', events_path, 'data-no-turbolink' => true %>
+<%= link_to '戻る', events_path, 'data-no-turbolink' => true %>
+</div>
