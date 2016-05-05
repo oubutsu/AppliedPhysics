@@ -277,7 +277,6 @@ DEPENDENCIES
   slim-rails
   spring
   sqlite3
-  turbolinks
   tweetstream
   twitter
   uglifier (>= 1.3.0)
