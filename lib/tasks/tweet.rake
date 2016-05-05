@@ -4,7 +4,10 @@ namespace :twiiter do
 	desc "tweet events"
 	task :tweetevent => :environment do
 		bot =  Bot.new
-		reports = Event.where(deadline: Date.today+1)
+		reports = []
+		for i in 0..3 do
+  		reports += Event.where(deadline: Date.today+i)
+  		end
 		case Time.now.hour
 			when 0 then
 				templete = "< 朝のお知らせ >\n明日の課題は"
@@ -15,14 +18,18 @@ namespace :twiiter do
 			when 12 then
 				templete = "< 夜のお知らせ >\n明日の課題は"
 		end
-		if reports.nil?
+		if reports.present?
 			reports.each do |report|
-				templete = "#{templete}\n・" + report.name
+				templete = "#{templete}\n・" + report.name + " : " + report.deadline.month.to_s + "月" + report.deadline.day.to_s + "日まで"
 			end
 		else
 			templete = "#{templete}ありません\n https://appliedphysics.herokuapp.com/"
 		end
-
-		bot.client.update(templete)
+		begin
+		  bot.client.update(templete)
+		rescue
+		  templete = "直近の課題が多すぎて140字に収まりませんでした。\nお手数ですが、サイトにて課題をご確認ください。\n https://appliedphysics.herokuapp.com/"
+		  bot.client.update(templete)
+		end
 	end
 end
