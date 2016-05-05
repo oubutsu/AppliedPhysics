@@ -2,7 +2,7 @@ json.array!(@events) do |event|
   json.title event.name
   json.start event.deadline
   json.end event.deadline
-  
+
   case event.event_type
   when 'レポート' then
   	json.color '#5CB3FF'

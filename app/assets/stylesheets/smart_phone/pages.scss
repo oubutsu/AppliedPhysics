@@ -19,4 +19,45 @@
   	float: none;
   	padding: 0;
   }
+  .content{
+    p{
+      padding-top: 5px;
+      padding-left: 20px;
+      padding-bottom: -3px;
+    }
+    &_name{
+      width: 30%;
+      border-bottom: 1px solid #555;
+      padding-left: 30px;
+      padding-top: 1px;
+      padding-bottom: 1px;
+    }
+    &_deadline{
+      width: 60%;
+      border-bottom: 1px solid #555;
+      padding-left: 30px;
+    }
+    li{
+      display: flex;
+      padding: 3px;
+    }
+    li:last-child{
+      border: none;
+    }
+    &-report{
+      h2{
+      background: #5CB3FF;
+      }
+    }
+    &-small_test{
+      h2{
+      background: #59E817;
+      }
+    }
+    &-others{
+      h2{
+      background: #B6B6B4;
+      }
+    }
+  }
 }

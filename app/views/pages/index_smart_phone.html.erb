@@ -1,16 +1,14 @@
 <%= render partial: "events/navi"%>
 <div class="top-page">
-	<div class="report contents">
+	<div class="content-report contents">
 		<h2>今週のレポート</h2>
 		<div class="content">
 		  <% if @reports.present? %>
 			<ul>
 	          <% @reports.each do |report| %>
 	            <li>
-	              <% if report.event_type == 'レポート'  %>
-		              <%= report.name %>:
-		              <%= report.deadline %>まで
-	              <% end %>
+		          <div class="content_name"><%= report.name %></div>
+		          <div class="content_deadline"><%= report.deadline.month %>月<%= report.deadline.day %>日まで</div>
 	            </li>
 	          <% end %>
 	        </ul>
@@ -19,17 +17,15 @@
 	      <% end %>
 		</div>
 	</div>
-	<div class="small_test contents">
+	<div class="content-small_test contents">
 		<h2>今週の小テスト</h2>
 		<div class="content">
 		  <% if @tests.present? %>
 			<ul>
 	          <% @tests.each do |test| %>
 	            <li>
-	              <% if test.event_type == '小テスト'  %>
-		              <%= test.name %>:
-		              <%= test.deadline %>まで
-	              <% end %>
+		          <div class="content_name"><%= test.name %></div>
+		          <div class="content_deadline"><%= test.deadline.month %>月<%= test.deadline.day %>日までまで</div>
 	            </li>
 	          <% end %>
 	        </ul>
@@ -38,9 +34,21 @@
 	      <% end %>
 		</div>
 	</div>
-	<div class="others contents">
+	<div class="content-others contents">
 		<h2>その他</h2>
 		<div class="content">
+			<% if @others.present? %>
+			<ul>
+	          <% @others.each do |other| %>
+	            <li>
+		          <div class="content_name"><%= other.name %></div>
+		          <div class="content_deadline"><%= other.deadline.month %>月<%= other.deadline.day %>日まで</div>
+	            </li>
+	          <% end %>
+	        </ul>
+	      <% else %>
+	      	<p>その他の予定はありません</p>
+	      <% end %>
 		</div>
 	</div>
 </div>
