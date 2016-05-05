@@ -24,7 +24,7 @@
 			<ul>
 	          <% @tests.each do |test| %>
 	            <li>
-		          <div class="content_name"><%= test.name %></div>
+		          <div class="content_name"><%= link_to test.name, test  %></div>
 		          <div class="content_deadline"><%= test.deadline.month %>月<%= test.deadline.day %>日まで</div>
 	            </li>
 	          <% end %>
@@ -41,7 +41,7 @@
 			<ul>
 	          <% @others.each do |other| %>
 	            <li>
-		          <div class="content_name"><%= other.name %></div>
+		          <div class="content_name"><%= link_to other.name, other  %></div>
 		          <div class="content_deadline"><%= other.deadline.month %>月<%= other.deadline.day %>日まで</div>
 	            </li>
 	          <% end %>
