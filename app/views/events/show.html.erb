@@ -25,23 +25,40 @@
   <% end %>
 </div>
 
-<div class="container">
-  <div>掲示板</div>
-  <% @event.microposts.each do |micropost| %>
-  <p><%= micropost.content %></p>
+<div class="board">
+  <h4>掲示板</h4>
+  <% if @event.microposts.size > 2%>
+  <% @event.microposts.each.with_index(1) do |micropost,index| %>
+  <div class="board-item">
+  <div class="board_info"><%= index %>: <%= micropost.editor %> : <%= micropost.created_at%> </div>
+  <div class="board_content"><%= micropost.content %></div>
+</div>
+  <% end %>
   <% end %>
 </div>
 
 
 <%= form_for(@micropost) do |f| %>
-  <div class="field">
-    <%= f.text_field :content %>
+  <div class="field form-group">
+    <%= f.label '名前',:class => "control-label" %>
+    <div class="form-field">
+      <%= f.text_field :editor, :class => "form-control" %>
+    </div>
   </div>
 
-  <div class="actions">
-    <%= f.submit "送信", :class => "button" %>
+
+  <div class="field form-group">
+    <%= f.label 'コメント',:class => "control-label" %>
+    <div class="form-field">
+      <%= f.text_area :content, :class => "form-control" %>
+    </div>
+  </div>
+
+
+  <div class="align-center">
+     <%= f.submit "送信", :class => "button"%>
   </div>
 <% end %>
 
-<%= link_to '戻る', events_path, 'data-no-turbolink' => true %>
+<%= link_to 'Back', events_path, 'data-no-turbolink' => true %>
 </div>
