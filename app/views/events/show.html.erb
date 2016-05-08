@@ -1,28 +1,49 @@
 <div class="show">
-<p id="notice"><%= notice %></p>
-<div class="event">
-<div class="event-item">
-  <div class="event-item-label">Name</div>
-  <div class="event-item-content"><%= @event.name %></div>
-</div>
+  <p id="notice">
+    <%= notice %>
+  </p>
+  <div class="event">
+    <div class="event-item">
+      <div class="event-item-label">
+        Name
+      </div>
+      <div class="event-item-content">
+        <%= @event.name %>
+      </div>
+    </div>
 
-<div class="event-item">
-  <div class="event-item-label">Deadline</div>
-  <div class="event-item-content"><%= @event.deadline %></div>
-</div>
+  <div class="event-item">
+    <div class="event-item-label">
+      Deadline
+    </div>
+    <div class="event-item-content"> 
+      <%= @event.deadline %>
+    </div>
+  </div>
 
-<div class="event-item">
-  <div class="event-item-label">Place</div>
-  <div class="event-item-content"><%= @event.place %></div>
-</div>
+  <div class="event-item">
+    <div class="event-item-label">
+      Place
+    </div>
+    <div class="event-item-content">
+      <%= @event.place %>
+    </div>
+  </div>
 
-<div class="event-item">
-  <div class="event-item-label">Comment</div>
-  <% if @event.comment.present? %>
-    <div class="event-item-content"><%= @event.comment %></div>
-  <% else %>
-    <div class="event-item-content">特にありません</div>
-  <% end %>
+  <div class="event-item">
+    <div class="event-item-label">
+      Comment
+    </div>
+    <% if @event.comment.present? %>
+      <div class="event-item-content">
+        <%= @event.comment %>
+      </div>
+    <% else %>
+      <div class="event-item-content">
+        特にありません
+      </div>
+    <% end %>
+  </div>
 </div>
 
 <div class="board">
@@ -59,6 +80,7 @@
      <%= f.submit "送信", :class => "button"%>
   </div>
 <% end %>
-
+<div class = "back-button">
 <%= link_to 'Back', events_path, 'data-no-turbolink' => true %>
+</div>
 </div>

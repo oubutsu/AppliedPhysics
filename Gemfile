@@ -38,6 +38,8 @@ gem 'anemone'
 gem 'slim'
 gem 'slim-rails'
 
+#GoogleAnalytics用のgem
+gem 'google-analytics-rails'
 
 gem 'activeadmin', github: 'activeadmin'
 gem 'devise'
