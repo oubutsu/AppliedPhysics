@@ -7,18 +7,18 @@ class Bot
   def initialize
     #アカウントの設定
     @client=Twitter::REST::Client.new{|config|
-      config.consumer_key="5Qk9x5Q2Y1iHDtXUK4X1xIlR1"
-      config.consumer_secret="8fHjI2s49rn5e6BA1gJX8J0yQ9zpMsZPTr50WqdxCXpl0zSbX8"
-      config.access_token="723124543951237120-9dsC1CnHpjSRG6EMmgLqTSrRU3rSfXs"
-      config.access_token_secret="kplGuWjgyKqmSvJ8F7BwpiMJMt1TsBH5uQ5wIv3pmakIt"
+      config.consumer_key="＃"
+      config.consumer_secret="＃"
+      config.access_token="＃"
+      config.access_token_secret="＃"
     }
 
 
     TweetStream.configure do |config|
-      config.consumer_key = "5Qk9x5Q2Y1iHDtXUK4X1xIlR1"
-      config.consumer_secret = "8fHjI2s49rn5e6BA1gJX8J0yQ9zpMsZPTr50WqdxCXpl0zSbX8"
-      config.oauth_token = "723124543951237120-9dsC1CnHpjSRG6EMmgLqTSrRU3rSfXs"
-      config.oauth_token_secret = "kplGuWjgyKqmSvJ8F7BwpiMJMt1TsBH5uQ5wIv3pmakIt"
+      config.consumer_key = "＃"
+      config.consumer_secret = "＃"
+      config.oauth_token = "＃"
+      config.oauth_token_secret = "＃"
       config.auth_method = :oauth
     end
 
